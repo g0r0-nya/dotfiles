@@ -19,7 +19,7 @@ set smartindent
 " 改行時に前のインデントを継続する
 set autoindent
 " タブ文字の表示幅
-set tabstop=3
+set tabstop=4
 " Vimが挿入するインデントの幅
 set shiftwidth=2
 " 構文毎に文字色を変化させる
@@ -50,3 +50,9 @@ set incsearch
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
+
+filetype plugin on
+
+"augroup filetypedetect
+"	au BufRead,BufNewFile *.s setfiletype gas
+"augroup END
