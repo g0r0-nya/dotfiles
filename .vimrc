@@ -2,7 +2,7 @@
 " 文字コードをUTF-8に設定
 " set fenc=utf-8
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set fileformats=unix,dos,mac
 "入力中のコマンドをステータスに表示する
 set showcmd
@@ -56,3 +56,11 @@ filetype plugin on
 "augroup filetypedetect
 "	au BufRead,BufNewFile *.s setfiletype gas
 "augroup END
+
+" Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set laststatus=2
+set showtabline=2
+set noshowmode
